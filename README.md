@@ -4,21 +4,21 @@ Download the war file from : https://www.jenkins.io/download/
 
 Steps:
 download the war file from the mentioned link
-cmd : `java -jar C:\Users\pkuma\Downloads\jenkins.war --httpPort=9090`
+cmd : `java -jar C:\Users\pkuma\Downloads\jenkins.war
   -- A key will be generated : `312e163e20c549fa9d20be1e20ea27a7`
  ` C:\Users\pkuma\.jenkins\secrets\initialAdminPassword`
   
-  -Run in localhost:9090 port
-  -then setup an admin : pks, era123
+  -Run in localhost:8080 port
+  -then setup an admin : admin, admin
 
 
 
 
 ## My Setup
 
-port : 9090
+port : 8080
 
-## In localhost:9090 the following admin pannel can be found
+## In localhost:8080 the following admin pannel can be found
 ![image](https://user-images.githubusercontent.com/46686524/148693517-c31d2dae-6f3d-493c-bb6b-510655ab8e4a.png)
 
 - The auto gernated password must be added here
@@ -27,18 +27,18 @@ port : 9090
 Then the following panel is shown. It asks to create the first admin
 ![image](https://user-images.githubusercontent.com/46686524/148693859-7bff92e7-4a9e-464a-8a04-cdde87b38a09.png)
 
-Then this jenkins url is asked such the following image
+Then this jenkins url is asked as such the following image
 ![image](https://user-images.githubusercontent.com/46686524/148693916-5d126016-3544-4d85-a505-30b49520d9aa.png)
 
-Jenkins is then ready to use! congrats!
+Jenkins is then ready to use!
 
-## adding a maven project in jenkins
+## Adding a maven project in jenkins
 - from the dashboard choose manage jenkins
 ![image](https://user-images.githubusercontent.com/46686524/148694126-cbe46798-6d93-4ccb-84e9-c52329889215.png)
 
 -Then select manage plugins >> available >> [find maven plugin]>> insatll the maven ingetration plugin for deploying maven projects
 
-## deploy new item
+## Deploy new item
 - from the dash baord choose new item
 ![image](https://user-images.githubusercontent.com/46686524/148694310-dc057821-be2e-43c0-8cde-331655ddfbde.png)
 
@@ -50,10 +50,10 @@ We are directed to the following page
 - from the source code manager the git option must be selected and then the git project URL needs to be pasted
 ![image](https://user-images.githubusercontent.com/46686524/148694395-4b6ad48f-9c1e-4949-88b3-6d069bb57f06.png)
 
-## adding jdk from global config 
+## Adding jdk from global config 
 ![image](https://user-images.githubusercontent.com/46686524/154003666-b2fafb8d-793a-41d5-9c2c-43e86af63d42.png)
 
-## adding maven home like following
+## Adding maven home like following
 ![image](https://user-images.githubusercontent.com/46686524/154003814-5555386a-4a0e-4366-9dce-b98cc0d70e18.png)
 
 ## Testing if windows command is running
@@ -61,11 +61,11 @@ We are directed to the following page
 --After clicking build now button the console will show the following console output
 ![image](https://user-images.githubusercontent.com/46686524/154004569-fca46c4b-eb3d-412b-8f9e-181c9c1d4c2c.png)
 
-## adding Git project in build
+## Adding Git project in build
 from the source code management branch , select and the following items. If git proejct is private then credentials must be provided as well
 ![image](https://user-images.githubusercontent.com/46686524/154004951-2b5007da-fdae-42ed-a2eb-8dcdc8ed6746.png)
 
-## adding command to generate jar/war file from the project
+## Adding command to generate jar/war file from the project
 ![image](https://user-images.githubusercontent.com/46686524/154007911-6f5a5fe5-e3d8-4a0a-9b6c-b17cea87ee25.png)
 -a sucessful build
 
@@ -91,23 +91,23 @@ add manager-script to tomcat-user.xml like the following
 fullName="Administrator" roles="admin,manager,manager-gui,admin-gui,manager-script"/>
 ```
 
-## from manage jenkins >> add plugins >> add `deploy to container` like follwoing image
+## From manage jenkins >> add plugins >> add `deploy to container` like follwoing image
 
 ![image](https://user-images.githubusercontent.com/46686524/154029687-f80b3e1c-e012-4f4f-a212-c71670da981f.png)
 
-## fill up the post deployment providing the following items
+## Fill up the post deployment providing the following items
 ![image](https://user-images.githubusercontent.com/46686524/154035860-b5e8e819-496d-44c1-855c-c946b54bccfa.png)
 
 # Automated build with github commit using Web hook
 
 * Download Ngrok from https://ngrok.com/download . Ngrok helps to convert local ip to recognizable web ip.
 
-## using ngrok
+## Using ngrok
 open cmd and command is : `ngrok.exe protocol portnumber` (ex : ngrok.exe http 8080 where 8080 is the port where jankins is running)
 
 ![image](https://user-images.githubusercontent.com/46686524/155067135-dcd447ba-01ac-4fb1-ad19-aec59197ee5a.png)
 
-using webhook from github like following
+Using webhook from github like following
 ![image](https://user-images.githubusercontent.com/46686524/155067748-9c8add7d-46d4-4afc-8d82-4d1bae597597.png)
 
 After setting up web hook the and commiting in reporsitory autiomatically jenkins build will be triggered like following image
@@ -115,13 +115,4 @@ After setting up web hook the and commiting in reporsitory autiomatically jenkin
 The changes will be reflected after the automated build.
 ![image](https://user-images.githubusercontent.com/46686524/155070616-1ec7c04f-0967-4110-9d27-7c04957b66ab.png)
 
-
-
-
-
-
-
-
-
-https://www.youtube.com/watch?v=GlQHS7FdVGM&list=PL6flErFppaj35spJjPy41-lruDjw2kRV-&index=8&ab_channel=Mukeshotwani
 
