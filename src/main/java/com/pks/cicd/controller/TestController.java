@@ -8,6 +8,6 @@ public class TestController {
 
     @GetMapping
     String getMessage(){
-        return "Hello from jenkins-cicd test2";
+        return "Hello from jenkins-cicd test";
     }
 }
